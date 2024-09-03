@@ -44,7 +44,7 @@ watchDebounced(() => [
       }
     })
 }, {
-  debounce: 500
+  debounce: 250
 })
 </script>
 
@@ -61,8 +61,14 @@ watchDebounced(() => [
 
       <ConverterSwapButton @click="doSwapCurrency" />
 
-      <ConverterCurrencySelect v-model="outputCurrency" :currencies="currencies" />
-      <ConverterResult :amount="result" :output-currency="outputCurrency" />
+      <ConverterCurrencySelect
+        v-model="outputCurrency"
+        :currencies="currencies"
+      />
+      <ConverterResult
+        :amount="result"
+        :output-currency="outputCurrency"
+      />
     </div>
   </div>
 </template>
